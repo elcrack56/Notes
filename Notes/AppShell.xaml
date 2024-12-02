@@ -4,19 +4,29 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:Notes.Views"
-    Shell.FlyoutBehavior="Disabled">
+    Shell.FlyoutBehavior="Flyout">
 
-    <TabBar>
+    <FlyoutItem Title="Navegacion tab" Icon="icon_menu.png">
+        <Tab Title="Notes" Icon="icon_notes.png">
+            <ShellContent
+                Title="Notes"
+                ContentTemplate="{DataTemplate views:AllNotesPage}" />
+        </Tab>
+        <Tab Title="About" Icon="icon_about.png">
+            <ShellContent
+                Title="About"
+                ContentTemplate="{DataTemplate views:AboutPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Notes" Icon="icon_notes.png">
         <ShellContent
             Title="Notes"
-            ContentTemplate="{DataTemplate views:AllNotesPage}"
-            Icon="{OnPlatform 'icon_notes.png', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}" />
-
+            ContentTemplate="{DataTemplate views:AllNotesPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="About" Icon="icon_about.png">
         <ShellContent
             Title="About"
-            ContentTemplate="{DataTemplate views:AboutPage}"
-            Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}" />
-    </TabBar>
+            ContentTemplate="{DataTemplate views:AboutPage}" />
+    </FlyoutItem>
 
 </Shell>
-    

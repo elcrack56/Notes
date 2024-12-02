@@ -8,8 +8,7 @@ namespace Notes.Models;
 
 internal class About
 {
-    public string Title => AppInfo.Name;
-    public string Version => AppInfo.VersionString;
-    public string MoreInfoUrl => "https://aka.ms/maui";
-    public string Message => "This app is written in XAML and C# with .NET MAUI.";
+    public string Nombre { get; set; } = "Darwin López";
+    public string Descripcion { get; set; } = "Hola me llamo Darwin López tengo 20 años mido 1.66 en altura, sigo Ingenieria en Software en la UDLA, me gusta la idea de aplicaciones moviles, base de datos y la creacion de videojuegos, auque me complico yo mismo en el aprendizaje ya que me encierro mucho en enteder informacion nueva o tengo miedo de olvidarme, soy un joven amable, feliz, caballero, detallista, me gusta el futbol verlo, practicarlo y sentir la emocion en cada partido, bueno aqui dejo una poca informacion de mi.   ";
+  
 }
